@@ -541,6 +541,7 @@ a:hover {
 
 .footer-field {
   display: flex;
+  gap: 24px;
 }
 
 .footer-input {
@@ -551,7 +552,6 @@ a:hover {
   border: 1px solid #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  margin-right: 24px;
   color: #FFF;
   font-size: 12px;
   line-height: 2em;
@@ -656,12 +656,7 @@ a:hover {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn:hover,
-.modal-btn:focus,
-.modal-btn:active {
-  background-color: #404BBF;
-  border: none;
-}
+
 
 .modal-icon {
   fill: #E7E9FC;
@@ -670,10 +665,16 @@ a:hover {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.modal-icon:hover,
-.modal-icon:focus,
-.modal-icon:active {
-  stroke: #fff;
+.modal-btn:hover,
+.modal-btn:focus,
+.modal-btn:active {
+  background-color: #404BBF;
+  border: none;
+}
+
+.modal-btn:hover+.modal-icon,
+.modal-btn:focus+.modal-icon,
+.modal-btn:active+.modal-icon {
   fill: #fff;
 }
 
@@ -689,6 +690,10 @@ a:hover {
 
 .modal-fields {
   margin-bottom: 8px;
+}
+
+.modal-fields-textarea {
+  margin-bottom: 16px;
 }
 
 .modal-fields-checkbox {
@@ -778,6 +783,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  cursor: pointer;
 }
 
 .modal-policy {
@@ -797,7 +803,7 @@ a:hover {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked+.custom-icon {
+.checkbox:checked+.modal-check>.custom-icon {
   background-color: #404BBF;
   border: none;
   fill: #f4f4fd;
